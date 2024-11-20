@@ -42,7 +42,6 @@ This is a RESTful API for managing a Blood Bank system, developed using C# and A
        -  GET /api/bloodbank/search?bloodType=A+
        -  GET /api/bloodbank/search?status=Available
 
-
 ## 1. CRUD Operations
 
 | Method | Endpoint              | Description                       |
@@ -52,6 +51,25 @@ This is a RESTful API for managing a Blood Bank system, developed using C# and A
 | GET    | `/api/bloodbank/{id}` | Get a specific entry by its ID.  |
 | PUT    | `/api/bloodbank/{id}` | Update an entry by its ID.       |
 | DELETE | `/api/bloodbank/{id}` | Delete an entry by its ID.       |
+---
+![Swagger UI](./images/s_start.png)
+*Swagger UI showcasing all endpoints*
+---
+![Swagger Add](./images/s_add.png)
+*Swagger UI showcasing Add Data*
+![PostMan Add](./images/p_add.png)
+*PostMan UI showcasing Add Data*
+___
+![Swagger GetAll](./images/s_GETALL.png)
+*Swagger UI showcasing All Data*
+![PostMan GetAll](./images/p_GETALL.png)
+*PostMan UI showcasing All Data*
+___
+![Swagger DELETE](./images/s_delete.png)
+*Swagger UI showcasing delete Data by id*
+![PostMan DELETE](./images/p_delete.png)
+*PostMan UI showcasing delete Data by id*
+### *As is showing status=404 and title="NOT FOUND" because i have delete the same id above*
 
 ---
 
@@ -62,7 +80,11 @@ This is a RESTful API for managing a Blood Bank system, developed using C# and A
 | GET    | `/api/bloodbank?page={page}&size={size}` | Retrieve entries with pagination. |
 
 ---
-
+### *As is showing data with id=5 and id=6  because i have delete the id=1 and id=2 (page=2 and size=2)*
+![Swagger Pagination](./images/s_pagination.png)
+*Swagger UI showcasing Add Data*
+![PostMan Pagination](./images/p_pagination.png)
+*PostMan UI showcasing Add Data*
 ## 3. Search
 
 | Method | Endpoint                                       | Description                                |
@@ -72,8 +94,3 @@ This is a RESTful API for managing a Blood Bank system, developed using C# and A
 | GET    | `/api/bloodbank/search?donorName={donorName}`  | Search entries by donor name.             |
 
 
-![Swagger UI](./images/swagger-ui.png)
-*Swagger UI showcasing all endpoints*
-
-![Postman Request](./images/postman-request.png)
-*Postman request to create a blood bank entry*
